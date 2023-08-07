@@ -544,8 +544,24 @@ h5 {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .top-48 {
@@ -599,14 +615,6 @@ h5 {
   margin-bottom: 2rem;
 }
 
-.mr-5 {
-  margin-right: 1.25rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .block {
   display: block;
 }
@@ -633,6 +641,10 @@ h5 {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-full {
@@ -675,6 +687,12 @@ h5 {
   justify-content: space-between;
 }
 
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -699,18 +717,22 @@ h5 {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.border-2 {
-  border-width: 2px;
+.self-end {
+  align-self: flex-end;
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+.border-2 {
+  border-width: 2px;
 }
 
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -727,9 +749,26 @@ h5 {
   padding-bottom: 3rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.pr-7 {
+  padding-right: 1.75rem;
+}
+
+.pt-40 {
+  padding-top: 10rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
 }
 
 .pr-0 {
@@ -746,6 +785,11 @@ h5 {
 
 .font-sans {
   font-family: Josefin Sans, sans-serif;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-4xl {
@@ -907,6 +951,11 @@ h5 {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
+.hover\:text-pink-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -920,11 +969,6 @@ h5 {
 
 .group:hover .group-hover\:border-b {
   border-bottom-width: 1px;
-}
-
-.group:hover .group-hover\:border-blue-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
 
 .group:hover .group-hover\:border-blue-50 {
